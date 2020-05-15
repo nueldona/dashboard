@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #63687e;
+  position: relative;
+}
+
+body::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 20%;
+  z-index: -9999;
+  top: 0px;
+  background-color: #f5f7ff;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+
+article {
+  padding: 2em 2em ;
+  z-index: 2;
+}
+
+.hero {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e202a;
+  margin-bottom: 5px;
+}
+
+.hero__footer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #63687e;
+  margin-bottom: 7px;
+}
+
+.second--hero {
+  color: #1a1b24;
+  font-weight: 700;
+  margin: 30px 0px 10px 0px;
+}
+
+hr { border: 1px solid #737994;}
+
+.box {
+  border-top: 5px solid #00bfff;
+  background-color: #f0f2fa;
+  padding: 2em 0em;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box:hover { background-color: #ced1e0;}
+
+.box__user {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.box__user img {  vertical-align: middle;}
+
+.bg__num {
+  font-size: 50px;
+  color: #1e202a;
+}
+
+.text {
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.update {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(29, 180, 137);
+}
+
+.update img {  vertical-align: middle; }
+
+.t--d {  color: rgb(220, 65, 76); }
+
+.t--b { border-top: 5px solid #1ca0f2;}
+
+.i--b::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background:linear-gradient(to right, #fdc468,#df4996);
+  border-radius: 10px;
+}
+
+.y--b { border-top: 5px solid #c4032a; }
+
+.second--hero { color: #63687e; }
+
+.alt--box {
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left:2em;
+  padding-right: 2em;
+}
+
+.right > img { margin: 0px 0px 7px 0px; }
+
+.right > .img { margin-left: 23px; }
+
+.right > .imag { margin-left: 10px; }
+
+/* toggle for dark mode*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aeb3cb;
+  transition: .5s;
+  border-radius: 35px;
+}
+
+.switch input { display: none; }
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #ffffff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(to right,#378fe6, #3eda82);
+}
+
+input:checked + .slider::before { transform: translateX(25px); }
+
+.dark--mode { margin: 3px 10px 0px 0px; }
+
+.darkmode__section {
+  border-top: 1px solid #000;
+  margin: 30px 0px 40px 0px;
+  padding-top: 20px;
+  display: flex;
+}
+  
+
+
+@media only screen and (min-width: 600px) {
+  body::after { height: 18%; }
+    
+  article { padding: 2em 5em; }
+
+  .top__section {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 5px 0px 40px 0px;
+  }
+
+  .inner__section-two {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .container-fluid {
+    display: grid;
+    margin-top: 10px;
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  .second__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .darkmode__section {
+    display: flex;
+    padding: 15px 0px 0px 3em;
+    border-top: none;
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body::after { height: 33%; }
+
+  .container { grid-template-columns: repeat(4, 1fr);}
+
+  .inner__section-two { grid-template-rows: 1fr; }
+
+  .container-fluid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+  }
+
+  .second__container { grid-template-rows: 1fr;}
+
+  .darkmode__section {
+    display: flex;
+    padding: 15px 0px 0px 11em;
+    border-top: none;
+    margin: 0px;
+  }
+  
+}
